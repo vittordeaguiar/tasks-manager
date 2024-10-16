@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Exo 2", sans-serif;
+}
+
+/* Variáveis para facilitar o ajuste de cores */
+:root {
+    --primary-color: #8A4FFF; /* Roxo mais suave e elegante */
+    --primary-hover: #7A3EEB; /* Roxo escuro, levemente mais desaturado para hover */
+    --primary-light: #D9D0FF; /* Roxo claro para fundo de inputs */
+    --dark-color: #202020; /* Preto escuro */
+    --light-color: #F9F9F9; /* Quase branco */
+    --text-color: #EFEFEF; /* Branco */
+    --text-dark: #B3B3B3; /* Cinza claro para textos */
+    --border-radius: 8px; /* Arredondamento consistente */
+}
+
+
+/* Estilos gerais */
+body {
+    background-color: var(--dark-color);
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.65rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1.45rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.debug {
+    border: 1px solid red;
+    border-radius: 4px;
+}
+
+/* Estilo para os inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    background-color: var(--primary-light);
+    color: var(--dark-color);
+    font-size: 16px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    outline: none;
+}
+
+/* Estilo ao focar nos inputs */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border-color: var(--primary-hover);
+    background-color: var(--light-color);
+    outline: none;
+}
+
+/* Placeholder estilizado */
+input::placeholder,
+textarea::placeholder {
+    color: var(--text-dark);
+    opacity: 0.7;
+}
+
+/* Estilo para botões */
+button {
+    padding: 8px 10px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: 16px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo ao passar o mouse (hover) nos botões */
+button:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+/* Estilo ao clicar no botão */
+button:active {
+    background-color: var(--primary-hover);
+    transform: translateY(0);
+}
+
+/* Estilo para botões desabilitados */
+button:disabled {
+    background-color: var(--primary-light);
+    color: var(--text-dark);
+    cursor: not-allowed;
+    box-shadow: none;
+}
